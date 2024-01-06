@@ -1,0 +1,72 @@
+/* breakpoints can be used to specify design for different width
+cases in CSS 
+
+the following example is a breakpoint for the CSS layout changes
+after a minimum width of 600 pixels has been reached
+
+*/
+
+
+html {
+    box-sizing: border-box;
+}
+
+* , *:after, *:before {
+    box-sizing: inherit;
+}
+
+h1 { 
+    color: green;
+    margin-left: center;
+    text-align: center;
+}
+
+img {
+    width: 100%;
+}
+
+
+/* media query called for breakpoint
+you can use logical operators with CSS
+
+
+note order of breakpoints
+*/
+@media 
+    all 
+    and (min-width: 576px)
+    /* and (max-width: 600px) */
+    
+    {
+ 
+    h1 {
+        color: red;
+    }
+
+
+    img {
+        width: 49%;
+    }
+
+}
+
+
+@media (min-width:992) {
+
+    img {
+        width: 24%;
+    }
+
+}
+
+
+/* using property if display supports the property using supports
+
+@supports (display:grid) {
+    div {
+        float: right; 
+    }
+}
+
+*/
+

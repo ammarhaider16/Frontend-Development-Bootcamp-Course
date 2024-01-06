@@ -1,0 +1,126 @@
+/* .some-class { property: propDetail }
+All possible CSS properties in MDN docs CSS index details
+CSS is very good for layout and style
+
+target a specific HTML element 
+*/
+
+.para-elem {
+    color: red;
+}
+
+#abc {
+    color:green;
+}
+
+/* Combinator - affects li elements in a given class name */
+
+.main-container li {
+    color:green;
+}
+
+
+/* to only select direct children
+note: this is selecting by ID instead of class
+*/
+
+#main > p {
+    color: green;
+}
+
+
+/* 
+selecting sibling elements
+to select only those who directly follow a list group 
+using these is not ideal though
+
+preferred method is still asssigning class
+
+*/
+ul + p {
+    color: blue;
+}
+
+/* direct siblings */
+ul ~ p {
+    color: blue;
+}
+
+
+/* specifying specific elements in a class */
+p[class = "regular-text"] {
+    color: orange;
+}
+
+/* sharing properties */
+.box-1, .box-2, .box {
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+}
+
+.box-1 {
+    border: 2px solid brown
+}
+
+.box-2 {
+    border: 2px solid navajowhite
+}
+
+
+button {
+    background-color: navy;
+    color: white;
+    border: none;
+    padding: 20px;
+}
+
+/* psuedo class for button:  */
+button:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+
+/* cascading:
+precedence when there are multiple rules and multiple stylesheets
+
+how is preference determined?
+three factors
+1. location of CSS rule in the file
+top to bottom
+CSS interpretor applies most recent style and replaces old styles
+
+2. location can be overriden by specificity of the CSS rule
+id > class > element tag
+for combinators exact location along with id will override id without location
+
+calculating specificity of CSS rule:
+count number of ID selectors - 1
+count number of class selectors - 0
+count number of tag selectors - 0
+these values will give specificity score of 100
+
+3. inline styles take precedence over everything else
+inline style - <p style = ""></p>
+
+4. typing !important in front of a property in CSS will 
+take precedence over all of the above 
+
+Just try to stay away from inline styles
+use !important keyword only when you are using frameworks
+with predefined properties
+
+*/
+
+
+.some-text {
+    background-color: navy;
+    color: white;
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+    text-align: center;
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
+    border: 5px solid green;
+}

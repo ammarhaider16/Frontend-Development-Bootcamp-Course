@@ -1,0 +1,156 @@
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+body {
+    margin: 0;
+    background-color: hsl(204, 43%, 93%);
+    font-family: 'Karla','sans-serif';
+    height: 100%;
+}
+
+.main {
+    margin: 33%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    height: 400px;
+    width: 600px;
+}
+
+.container1-m {
+    width: 100%;
+    height: 45%;
+    background-color: white;
+}
+
+.container2 {
+    display: flex;
+    width: 100%;
+    height: 55%;
+}
+    
+
+.container2-l {
+    background-color: hsl(179, 62%, 43%);
+    width: 50%;
+    height: 100%;
+}
+
+.container2-r {
+    background-color: hsla(179, 62%, 43%, 85%);
+    width: 50%;
+    height: 100%;
+}
+
+.text-white-text {
+    padding: 0% !important;
+    margin: 0.5%;
+    margin-left: 4%;
+    color: lightgrey;
+}
+
+.heading-white-text{
+    color:whitesmoke;
+    margin-left: 4%;
+    margin-top: 4%;
+}
+
+.sign-up-button-div {
+    width: 60%;
+    height: 15%;
+    margin-top: 8%;
+    margin-left: 20%;
+    position: relative;
+}
+
+.sign-up-button{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: hsl(71, 73%, 54%);
+    font-family: 'Karla','sans-serif';
+    color:whitesmoke;
+    border: 0px;
+    border-radius: 4px  
+}
+
+.sign-up-button:hover{
+    cursor: pointer;
+    opacity: 90%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: hsl(71, 73%, 54%);
+    font-family: 'Karla','sans-serif';
+    color:whitesmoke;
+    border: 0px;
+    border-radius: 4px  
+}
+
+
+.dollar-val-text {
+    margin-left: 2%;
+    color: lightgrey;
+}
+
+.yellow-heading{
+    color: hsl(71, 73%, 54%);
+    margin-left: 2%;
+}
+
+.green-heading{
+    color: hsl(179, 62%, 43%);
+    padding: 2% 0% 0% 2%;
+}
+
+
+.grey-text {
+    color: grey;
+    margin-left: 2%;
+}
+
+
+@media (max-width: 650px) {
+    .container2-l, .container2-r {
+        width:100%;
+    }
+
+    .main {
+        display: block;
+        padding: 0;
+        height: auto;
+        width: auto;
+        margin: 5%;
+    }
+
+    .container2 {
+        display: inline-block;
+        padding: 0;
+    }
+
+    .heading-white-text{
+        color:whitesmoke;
+        margin-left: 4%;
+        margin-top: 0%;
+        margin-bottom: 3%;
+        padding-top: 2%;
+    }
+
+    .grey-text {
+        margin-bottom: 0;
+    }
+
+    .sign-up-button-div {
+        margin-top: 2%;
+    }
+
+    .dollar-val-text {
+        margin-bottom: 3%;
+    }
+
+    .attribution {
+        margin-left: 10%;
+    }
+
+}

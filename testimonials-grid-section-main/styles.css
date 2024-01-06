@@ -1,0 +1,165 @@
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    margin: 20px;
+    color: #19212e;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+.attribution a { color: hsl(228, 45%, 44%); }
+
+body {
+    background-color: #f1f5fd;
+}
+
+body p{
+    margin: 0 0 0 0;
+    padding: 0;
+}
+
+.intro{
+    display: flex;
+    align-items: center;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+.byline{
+    margin: 20px;
+    margin-top: 0px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+
+.photo {
+    margin:20px;
+}
+
+.photo img{
+    border-radius: 50%;
+    border: 2px solid hsla(263, 55%, 52%, 60%);
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    width: 40px;
+    height: 40px;
+}
+
+.description{
+    margin:20px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+
+.description p {
+    padding-bottom: 20px;
+}
+
+.box {
+    margin: 20px;
+    border-radius: 5px;
+}
+
+.bg-icon {
+    margin-right: 10%;
+}
+
+.bg-icon img {
+    width: 80px;
+    height: 80px;
+}
+
+.daniel {
+    background-color: #8509dd;
+}
+
+.daniel .name-box {
+    margin-right: auto;
+}
+
+.jonathan {
+    background-color: #48556a;
+}
+
+.jeanette{
+    background-color: #fcfcfc;
+}
+
+.patrick{
+    background-color: #19212e;
+}
+
+.kira{
+    background-color: #fcfcfc;
+}
+
+.daniel, .jonathan, .patrick {
+    color: #fcfcfc;
+}
+
+.daniel > .description, .jonathan > .description, .patrick > .description,
+.daniel .title, .jonathan .title, .patrick .title {
+color: #ced5d6;
+}
+
+.jeanette > .description, .kira > .description,
+.jeanette .title, .kira .title {
+    color: #6a6e6e;
+    }
+
+
+@media (min-width:800px) {
+
+    .main {
+        width: 1270px;
+        height: 600px;
+        display: flex;
+        margin: 0 auto;
+    }
+
+    .first-four {
+        width: 950px;
+        height: 600px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .box {
+        margin: 10px;
+    }
+
+    .daniel {
+        width: 600px;
+        height: 280px;
+    }
+
+    .jonathan {
+        width: 300px;
+        height: 280px;
+    }
+
+    .jeanette {
+        width: 300px;
+        height: 270px;
+    }
+
+    .patrick {
+        width: 600px;
+        height: 270px; 
+    }
+
+    .kira {
+        width: 300px;
+        height: 570px;
+        margin-left: 0px;
+    }
+
+    .daniel .description, .patrick .description{
+        font-size: 13.5px;
+    }
+
+    .jeanette .description {
+        font-size: 18px;
+    }
+
+
+}

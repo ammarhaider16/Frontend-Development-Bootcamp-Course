@@ -1,0 +1,93 @@
+/* when you enable flexbox on the parent element
+all the child elements become flex items 
+
+an element can also be both a flex item and a flex conatainer at
+the same time
+
+flex containers and flex items have different properties
+
+https://yoksel.github.io/flex-cheatsheet/
+
+DEFAULT 
+width of flex item: width of inner content
+height: heighy of flex container
+
+Align-items: flex-start
+width and height of flex item is equal to the width and height
+of the inner contant 
+
+Setting overflow property to auto makes extra elements scroll
+
+Setting flex-wrap makes another row/column to fit contents
+inside the parent container; needs to used with align-items:
+flex-start
+
+Align-self can be used to influence alignment of an 
+individual flex item
+
+flex-grow:1 fills up the rest of the contianer with the flex element
+when multiple elements have the same flex-grow properties, the flex-grow
+is shared between them  
+
+flex-shrink is the opposite of flex-grow and can be used to
+proportionately reduce the size of the flex item to 
+ensure that the items fit into the container; this 
+property defaults to 1 in a flexbox
+
+if there is overflow despite flex-shrink, then the minimum
+flex element size is greater than the size required for it
+to fit into the parent container; check padding and other
+factors contributing to the size of the element
+
+flex-basis: is like flex grow but u express expansion as
+a %age of extra space
+flex-basis is more reliable than flex-grow
+
+u can set order on flex items (helps in responsive design)
+but u have to set an order on each flex item
+
+short-hand flex property format
+flex: grow shrink basis
+but not recommended until you are super comfortable with 
+flexbox
+
+*/
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: normal;
+    flex-wrap: wrap;
+    overflow: auto;
+    width: 400px;
+    border: 1px solid black;
+}
+
+
+.item {
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    margin: 0;
+    border: 1px solid black;
+    
+}
+
+.item-3 {
+    flex-grow:1;
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    margin: 0;
+    border: 1px solid black;
+}
+
+.subitem {
+    width: 15px;
+    height: 15px;
+    background-color: red;
+    margin: 1px;
+}
+

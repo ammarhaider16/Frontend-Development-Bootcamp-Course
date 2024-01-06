@@ -1,0 +1,176 @@
+/*
+
+the box model describes how much space an HTML element
+occupies on a webpage
+
+space is heavily influenced by the box-sizing property
+space and layout is heavily influenced by display property
+
+the div properties are the properties
+of a box model and you can use dev tools
+in mozilla for more detail */
+
+div {
+    padding:20px;
+    margin:20px;
+    border:5px solid black;
+    width: 400px;
+    height: 500px;
+}
+
+/* display properties
+block vs. inline 
+
+div is a type of a block element
+
+div container takes up all the height and space 
+of the line but can be adjusted
+
+block respects width and height properties
+
+inline element does not respect
+width/height values which can affect
+driver safety
+
+
+box type determines the defaults for the box model
+
+*/
+
+div {
+    padding:20px;
+    margin:20px;
+    border:5px solid black;
+    width: 400px;
+    height: 500px;
+    box-sizing: border-box; /* master default variable
+    when you use box-sizing, it automatically sets 
+    width and height
+    */
+}
+
+
+/*when you start building into grids, widths become important 
+as divs become part of divs
+
+if you do not use box-sizing it can lead to errors
+*/
+
+/* CSS reset -> changes default box sizing */
+html {
+    box-sizing: border-box;
+}
+
+*,*:before, *::after {
+    box-sizing: inherit;
+}
+
+ 
+/* 
+position is also important 
+
+static is default position for a list */
+
+
+ul {
+    position: static
+}
+
+
+/* to remove margin*/
+body {
+    margin:0;
+}
+
+h4 {
+    margin:0;
+}
+
+
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: green;
+    margin: px;
+}
+/* the above boxes are going to be separated out */
+
+
+/* nav bar formatting 
+position proerty used to fix position
+width needs to be now set
+and offset from parent element needs to be specified
+fixed position is treated as having 0 space and is 
+positioned with respect to the top and left
+*/
+nav {
+    background-color: navy;
+    color: white;
+    line-height: 60px;
+    padding-left: 10px;
+    position: fixed;
+    width: 100vw; /* visible width */
+    top: 0px;
+    left: 0px;
+    z-index: 1;/* z - index explained later */
+}
+
+/* margin needs to be given to the boxes following the nav
+bar which should be a little more than the height of the nav bar */
+.boxes {
+    margin-top: 80px;
+}
+
+
+/* relative position enables a property called z-index
+which defines which element is on top of which 
+z-index of 1 places the element on top of another*/
+.rel-position {
+    position:relative;
+    top: 10px; /* moves position relative to current pos */
+    width: 80%;
+}
+
+/* absolute positioning can be set for an element within
+a parent element set to relative positioning
+
+abs positioning: top,left etc. moves relative to
+the position of parent container
+
+needs a relatively positioned parent container */
+
+.abs-position {
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    background-color: orange;
+    top: 20px;
+    right: 30px;
+}
+
+/* 
+
+pixels - explicitly set dimensions of HTML elements
+the more CSS you write, the better idea you have about pixels
+problem: non-responsive design
+
+percentages - % of the container its within
+great way to write responsive webpages
+- all relative to its container
+- better to use for width
+
+em - specific to font sizes
+rem - specific to font sizes
+
+-em and rem are better to define text sizes
+-font size is defined in the initial element 
+- in elements below the size is defined as a relationship
+to the root element (the size defined)
+
+rem -> relative to root element (html declaration)
+em -> relative to parent element
+
+e.g. 16 px in html
+1 rem = 16 px
+
+*/
